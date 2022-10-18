@@ -1,0 +1,969 @@
+@font-face {
+    font-family: 'Rodin';
+    src: url(fonts/FOTRodinProL.otf);
+}
+
+
+/* .for class and #for id */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+.welcome-page {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    z-index: 100;
+    position: absolute;
+}
+
+#welcome-cover {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+#welcome {
+    position: relative;
+    top: 30vh;
+    width: 100%;
+}
+
+.welcome-user {
+    font-family: 'Rodin', sans-serif;
+    width: auto;
+    font-size: 60px;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1000000;
+}
+
+#fullscreen-warning {
+    font-family: 'Rodin', sans-serif;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 1000000;
+    color: #ffffff;
+}
+
+.tangle-loading-cover {
+    height: 1080px;
+}
+
+
+
+.up-arrow-column1 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    position: absolute;
+}
+
+.up-arrow-column2 {
+    height: inherit;
+    width: 240px;
+    left: 240px;
+    top: 0px;
+    position: absolute;
+}
+
+.up-arrow-column3 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 480px;
+    position: absolute;
+}
+
+.up-arrow-column4 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 720px;
+    position: absolute;
+}
+
+.up-arrow-column5 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 960px;
+    position: absolute;
+}
+
+.up-arrow-column6 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 1200px;
+    position: absolute;
+}
+
+.up-arrow-column7 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 1440px;
+    position: absolute;
+}
+
+.up-arrow-column8 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 1680px;
+    position: absolute;
+}
+
+
+.down-arrow-column1 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: -120px;
+    position: absolute;
+}
+
+.down-arrow-column2 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 120px;
+    position: absolute;
+}
+
+.down-arrow-column3 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 360px;
+    position: absolute;
+}
+
+.down-arrow-column4 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 600px;
+    position: absolute;
+}
+
+.down-arrow-column5 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 840px;
+    position: absolute;
+}
+
+.down-arrow-column6 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 1080px;
+    position: absolute;
+}
+
+.down-arrow-column7 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 1320px;
+    position: absolute;
+}
+
+.down-arrow-column8 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 1560px;
+    position: absolute;
+}
+
+.down-arrow-column9 {
+    height: inherit;
+    width: 240px;
+    top: 0px;
+    left: 1800px;
+    position: absolute;
+}
+
+
+
+.up-arrow {
+    position: relative;
+    width: 0; 
+    height: 0; 
+    left: 0;
+    top: 0px;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-bottom: 120px solid none;
+}
+
+.down-arrow {
+    position: relative;
+    width: 0; 
+    height: 0; 
+    left: 0;
+    top: 0px;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent; 
+    border-top: 120px solid none;
+}
+
+
+/* Info Page / Background */
+
+.info-page {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, #ccc8b1 1px, rgba(217,211,187,0) 1px), linear-gradient(to bottom, #ccc8b1 1px, rgba(217,211,187,0) 1px); 
+    background-size: 10px 10px;
+    background-color: #d1cdb7;
+}
+
+/* swap grid / background image to just another class at bottom and overlay / opacity over everything yeah */
+
+#info {
+    position: relative;
+    top: 20vh;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+}
+
+#info-pane {
+    position: fixed;
+    margin-left: 60px;
+    width: 614px;
+    height: 100vh;
+    /* background: #ccc8af; */
+}
+
+.menu-header {
+    font-family: 'Rodin', sans-serif;
+    width: 80%;
+    height: 10%;
+    font-size: 44px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    margin: 0.1vh;
+    padding: 1vh;
+    color: #454138;
+    text-shadow: 0.4rem 0.4rem #918D82;
+}
+
+.background-circle-inner-left {
+    position: absolute;
+    content: '';
+    height: 1000px;
+    width: 1000px;
+    left: -500px;
+    bottom: 500px;
+    border: 2px solid #B3B09C;
+    border-radius: 50%;
+}
+
+.background-circle-outer-left {
+    position: absolute;
+    content: '';
+    height: 1000px;
+    width: 1000px;
+    left: -480px;
+    bottom: 480px;
+    border: 2px solid #B3B09C;
+    border-radius: 55%;
+}
+
+.background-circle-inner-right {
+    position: absolute;
+    content: '';
+    height: 1000px;
+    width: 1000px;
+    right: -500px;
+    bottom: -500px;
+    border: 2px solid #B3B09C;
+    border-radius: 50%;
+}
+
+.background-circle-outer-right {
+    position: absolute;
+    content: '';
+    height: 1000px;
+    width: 1000px;
+    right: -480px;
+    bottom: -480px;
+    border: 2px solid #B3B09C;
+    border-radius: 55%;
+}
+
+.background-line-middle-left {
+    position: absolute;
+    content: '';
+    width: 1480px;
+    height: 2px;
+    background: #B3B09C;
+    rotate: 45deg;
+    top: 430px;
+    left: -308px;
+}
+
+.background-line-left-left {
+    position: absolute;
+    content: '';
+    width: 1250px;
+    height: 2px;
+    background: #B3B09C;
+    rotate: 45deg;
+    top: 480px;
+    left: -243px;
+}
+
+.background-line-right-left {
+    position: absolute;
+    content: '';
+    width: 1250px;
+    height: 2px;
+    background: #B3B09C;
+    rotate: 45deg;
+    top: 280px;
+    left: -243px;
+}
+
+.background-line-middle-right {
+    position: absolute;
+    content: '';
+    width: 1480px;
+    height: 2px;
+    background: #B3B09C;
+    rotate: 45deg;
+    bottom: 430px;
+    right: -308px;
+}
+
+.background-line-left-right {
+    position: absolute;
+    content: '';
+    width: 1250px;
+    height: 2px;
+    background: #B3B09C;
+    rotate: 45deg;
+    bottom: 480px;
+    right: -243px;
+}
+
+.background-line-right-right {
+    position: absolute;
+    content: '';
+    width: 1250px;
+    height: 2px;
+    background: #B3B09C;
+    rotate: 45deg;
+    bottom: 280px;
+    right: -243px;
+}
+
+
+/* Main Buttons */
+
+.info-button {
+    position: relative;
+    top: 0%; /* after clicking on hobbies, transition top to like 20%  */
+    left: 18px;
+    font-family: 'Rodin', sans-serif;
+    width: 504px;
+    height: 48px;
+    font-size: 24px;
+    margin-top: 21.6px;
+    margin-left: 1.75vw;
+    margin-bottom: 28px;
+    padding: 0.4vh;
+    text-align: left;
+    text-indent: 2vw;
+    background-color: #b2ad99;
+    box-shadow: inset 0 0 0 0 #666257;
+    border: none;
+    color: #454138;
+    transition: 0.2s ease-in;
+}
+
+.info-button:hover {
+    box-shadow: inset 504px 0 0 0 #666257;
+    text-decoration: none;
+    color: #ccc8b1;
+}
+
+.info-button:hover .button-square {
+    background-color: #ccc8b1;
+}
+
+.info-button:not(:disabled)::before {
+    content: "";
+    transition: 0.2s ease-in;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.info-button:not(:disabled):hover::before {
+    top: -4px;
+    bottom: -4px;
+    border: solid #666257;
+    border-width: 2px 0;
+}
+
+.info-button-hover {            /* Keep hover active after press */
+    box-shadow: inset 504px 0 0 0 #666257;
+    text-decoration: none;
+    color: #ccc8b1;
+}
+
+.info-blockquote {          /* Left Border Thingy */
+    position: relative;
+    color: #454138;
+    border: solid #b2ad99;
+    border-width: 0 6px 0 16px;
+    content: '';
+    left: -40px;
+    width: 5px;
+    display: block;
+}
+
+.button-square {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    margin: 10px;
+    background-color: #454138;
+    display: block;
+}
+
+
+
+
+/* Hobbies */
+
+.hobby-section {
+    /* background-color: gray; */
+    position: relative;
+    height: inherit;
+    left: 100%;
+    top: -23%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+/*
+.hobby-button {
+    position: relative;
+    left: 18px;
+    font-family: 'Rodin', sans-serif;
+    width: 504px;
+    height: 48px;
+    font-size: 24px;
+    margin-top: 2vh;
+    margin-left: 1.75vw;
+    margin-bottom: 28px;
+    padding-top: 0.4vh;
+    text-align: left;
+    text-indent: 2vw;
+    background-color: #b2ad99;
+    box-shadow: inset 0 0 0 0 #666257;
+    border: none;
+    color: #454138;
+    transition: 0.2s ease-in;
+}
+
+.hobby-button:hover {
+    box-shadow: inset 504px 0 0 0 #666257;
+    text-decoration: none;
+    color: #ccc8b1;
+}
+*/
+
+
+.hobbies-blockquote {           /* Left Border Thingy */   
+    position: fixed;
+    color: #454138;
+    border: solid #b2ad99;
+    border-width: 0 6px 0 16px;
+    content: '';
+    left: 634px;
+    width: 5px;
+    /* height: 294px; */
+    display: block;
+}
+
+
+
+/* Activate and Deactivate Element */
+
+.hobbies-extend-on {
+    transition: all 0.75s ease;
+    visibility: visible !important;
+    opacity: 100% !important;
+}
+
+.hobbies-extend-off {
+    transition: all 0.75s ease;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+
+
+
+/* Cover */
+
+.cover {
+    position: absolute;
+    background-color: #454138;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.cover-on {
+    transition: all 0.75s ease;
+    visibility: visible !important;
+    opacity: 80% !important;
+}
+
+.cover-down {
+    transition: all 0.75s ease;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.welcome-up {
+    transition: all 0.75s ease;
+    visibility: hidden !important;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent; 
+    border-bottom: 120px solid #dcd8c0;
+}
+
+.welcome-down {
+    transition: all 0.75s ease;
+    visibility: hidden !important;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent; 
+    border-top: 120px solid #dcd8c0;
+}
+
+
+/* Arrows */
+
+.toggle {
+    transition: all 0.75s ease;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#aboutme-arrow {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 12px solid #454138;
+    position: absolute;
+    top: 36px;
+    rotate: 270deg;
+    right: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.75s ease;
+}
+
+#aboutme-arrow::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top: 24px solid #454138;
+}
+
+
+#experience-arrow {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 12px solid #454138;
+    position: absolute;
+    top: 134px;
+    rotate: 270deg;
+    right: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.75s ease;
+}
+
+#experience-arrow::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top: 24px solid #454138;
+}
+
+
+#projects-arrow {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 12px solid #454138;
+    position: absolute;
+    top: 232px;
+    rotate: 270deg;
+    right: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.75s ease;
+}
+
+#projects-arrow::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top: 24px solid #454138;
+}
+
+
+#hobbies-arrow {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 12px solid #454138;
+    position: absolute;
+    top: 330px;
+    rotate: 270deg;
+    right: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.75s ease;
+}
+
+#hobbies-arrow::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top: 24px solid #454138;
+}
+
+
+#gaming-arrow {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 12px solid #454138;
+    position: absolute;
+    top: 36px;
+    rotate: 270deg;
+    right: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.75s ease;
+}
+
+#gaming-arrow::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top: 24px solid #454138;
+}
+
+
+#anime-arrow {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 12px solid #454138;
+    position: absolute;
+    top: 134px;
+    rotate: 270deg;
+    right: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.75s ease;
+}
+
+#anime-arrow::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top: 24px solid #454138;
+}
+
+
+#music-arrow {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 12px solid #454138;
+    position: absolute;
+    top: 232px;
+    rotate: 270deg;
+    right: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.75s ease;
+}
+
+#music-arrow::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top: 24px solid #454138;
+}
+
+
+
+/* Pages */
+
+#aboutme-page {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    z-index: 100;
+    transition: all 0.75s ease;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #d9d3bb;
+    left: 5%;
+    top: 48px;
+}
+
+.aboutme {
+    font-family: 'Rodin', sans-serif;
+    font-size: 24px;
+    text-align: justify;
+    margin-right: 10%;
+}
+
+#chomu {
+    float: left;
+    margin-right: 10%;
+}
+
+#experience-page {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    z-index: 100;
+    transition: all 0.75s ease;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #d9d3bb;
+    left: 5%;
+    top: 48px;
+    overflow: hidden;
+}
+
+#experiencecolumns {
+    float: left;
+    width: 50%;
+    height: 93.75%;
+    overflow-y: scroll;
+    outline: 2px solid #B3B09C;
+}
+
+#experiencecolumns::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 20px;
+}
+
+#experiencecolumns::-webkit-scrollbar-thumb {
+    background: #B3B09C;
+}
+
+#experiencecolumns::-webkit-scrollbar-thumb:hover {
+    background: #E65252;
+}
+
+.text {
+    font-family: 'Rodin', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#headers {
+    font-family: 'Rodin', sans-serif;
+    font-size: 48px;
+    text-align: justify;
+    margin-left: 4%;
+}
+
+#subheaders {
+    font-family: 'Rodin', sans-serif;
+    font-size: 30px;
+    text-align: justify;
+    margin-left: 10%;
+}
+
+#projects-page {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    z-index: 100;
+    transition: all 0.75s ease;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #d9d3bb;
+    left: 5%;
+    top: 48px;
+    overflow-y: scroll;
+}
+
+#project-images {
+    float: left;
+    margin-right: 2%;
+    margin-left: 4%;
+    height: 400px;
+    width: auto;
+}
+
+#projects-page::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 20px;
+}
+
+#projects-page::-webkit-scrollbar-thumb {
+    background: #B3B09C;
+}
+
+#projects-page::-webkit-scrollbar-thumb:hover {
+    background: #E65252;
+}
+
+#gaming-page {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    z-index: 100;
+    transition: all 0.75s ease;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #d9d3bb;
+    left: 5%;
+    top: 48px;
+    overflow-y: scroll;
+}
+
+#gaming-page::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 20px;
+}
+
+#gaming-page::-webkit-scrollbar-thumb {
+    background: #B3B09C;
+}
+
+#gaming-page::-webkit-scrollbar-thumb:hover {
+    background: #E65252;
+}
+
+#anime-page {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    z-index: 100;
+    transition: all 0.75s ease;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #d9d3bb;
+    left: 5%;
+    top: 48px;
+    /* overflow-y: scroll; */
+}
+
+/*
+
+#anime-page::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 20px;
+}
+
+#anime-page::-webkit-scrollbar-thumb {
+    background: #B3B09C;
+}
+
+#anime-page::-webkit-scrollbar-thumb:hover {
+    background: #E65252;
+}
+
+*/
+
+#music-page {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    z-index: 100;
+    transition: all 0.75s ease;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #d9d3bb;
+    left: 5%;
+    top: 48px;
+    /* overflow-y: scroll; */
+}
+
+
+.page-header {
+    font-family: 'Rodin', sans-serif;
+    position: relative;
+    font-size: 24px;
+    height: 48px;
+    padding: 0.4vh;
+    color: #b2ad99;
+    background-color: #454138;
+    text-indent: 2.5vw;
+}
+
+.page-button-square {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    margin: 10px;
+    background-color: #b2ad99;
+    display: block;
+}
